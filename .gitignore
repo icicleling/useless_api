@@ -26,4 +26,5 @@ simple_api-*.tar
 # Temporary files for e.g. tests
 /tmp
 
+# vscode extension
 .elixir_ls

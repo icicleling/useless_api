@@ -10,6 +10,7 @@ defmodule SimpleApi.Application do
     children = [
       # Starts a worker by calling: SimpleApi.Worker.start_link(arg)
       # {SimpleApi.Worker, arg}
+      {Plug.Cowboy, scheme: :http, plug: SimpleAPI.Router, options: [port: 8080]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
