@@ -1,4 +1,4 @@
-defmodule SimpleApi.Application do
+defmodule UselessApi.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,14 +8,14 @@ defmodule SimpleApi.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: SimpleApi.Worker.start_link(arg)
-      # {SimpleApi.Worker, arg}
-      {Plug.Cowboy, scheme: :http, plug: SimpleAPI.Router, options: [port: 8080]}
+      # Starts a worker by calling: UselessApi.Worker.start_link(arg)
+      # {UselessApi.Worker, arg}
+      {Plug.Cowboy, scheme: :http, plug: UselessApi.Router, options: [port: 8080]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: SimpleApi.Supervisor]
+    opts = [strategy: :one_for_one, name: UselessApi.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

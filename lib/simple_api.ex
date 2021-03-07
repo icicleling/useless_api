@@ -1,6 +1,6 @@
-defmodule SimpleApi do
+defmodule UselessApi do
   @moduledoc """
-  Documentation for `SimpleApi`.
+  Documentation for `UselessApi`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule SimpleApi do
 
   ## Examples
 
-      iex> SimpleApi.hello()
+      iex> UselessApi.hello()
       :world
 
   """

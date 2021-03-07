@@ -1,8 +1,8 @@
-defmodule SimpleApiTest do
+defmodule UselessApiTest do
   use ExUnit.Case
-  doctest SimpleApi
+  doctest UselessApi
 
   test "greets the world" do
-    assert SimpleApi.hello() == :world
+    assert UselessApi.hello() == :world
   end
 end
