@@ -7,7 +7,9 @@ RUN mix local.hex --force\
     && mix deps.get\
     && mix release
 
-FROM elixir:1.12-alpine
+FROM alpine
+RUN apk upgrade --no-cache \
+    && apk add --no-cache libgcc libstdc++ ncurses-libs
 WORKDIR /app
 COPY --from=builder /project/_build .
 EXPOSE 8080
