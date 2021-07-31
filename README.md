@@ -1,21 +1,13 @@
 # UselessApi
 
-**TODO: Add description**
+useless
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `:useless_api` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:useless_api, "~> 0.1.0"}
-  ]
-end
+## Docker
+```
+docker build -t useless-api .
+docker run -d -p 9000:8080 useless-api
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/:useless_api](https://hexdocs.pm/:useless_api).
+Call `localhost:9000/do-nothing`
 
+Or `localhost:9000/do-something`
